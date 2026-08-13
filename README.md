@@ -1,6 +1,7 @@
 # Checkpoint 1 - Funcao Serverless na Nuvem
 
 Este projeto contem uma funcao serverless simples que responde a requisicoes HTTP e foi implantada em ambiente de nuvem.
+API em Go (Fiber) que responde em GET / com a data/hora atual em America/Sao_Paulo.
 
 ## Provedor Utilizado
 * GCP
