@@ -1,36 +1,28 @@
-# checkpoint1-go
+# Checkpoint 1 - Funcao Serverless na Nuvem
 
-API em Go (Fiber) que responde em `GET /` com a data/hora atual em
-`America/Sao_Paulo`. Deploy via Cloud Run (aceita container, ao contrário do
-Cloud Functions, que exigiria outro formato de handler).
+Este projeto contem uma funcao serverless simples que responde a requisicoes HTTP e foi implantada em ambiente de nuvem.
 
-## Rodar localmente
+## Provedor Utilizado
+* GCP
 
+## Como rodar localmente
+
+### Pre-requisitos
+* Goland
+
+### Passo a passo
+1. Clone o repositorio para sua maquina:
+git clone https://github.com/Doebber/Checkpoint-1.git
+
+2. Entre na pasta do projeto:
+cd Checkpoint-1.git
+
+3. Instale as dependencias do projeto:
 ```bash
 go mod tidy
+```
+4. Rode o servidor de testes local:
+```bash
 go run main.go
 curl http://localhost:8080/
-```
-
-## Deploy no Cloud Run
-
-```bash
-gcloud config set project project-ab4fa986-e441-43f4-9fe
-gcloud services enable run.googleapis.com cloudbuild.googleapis.com
-
-gcloud run deploy checkpoint1-go \
-  --source . \
-  --region southamerica-east1 \
-  --allow-unauthenticated \
-  --port 8080
-```
-
-O comando imprime a URL pública ao final. Teste com `curl <url>/`.
-
-Para atualizar, rode o mesmo comando de deploy de novo. 
-
-Para remover:
-
-```bash
-gcloud run services delete checkpoint1-go --region southamerica-east1
 ```
