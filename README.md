@@ -15,7 +15,9 @@ Este projeto contem uma funcao serverless simples que responde a requisicoes HTT
 git clone https://github.com/Doebber/Checkpoint-1.git
 
 2. Entre na pasta do projeto:
+```bash
 cd Checkpoint-1
+```
 
 3. Instale as dependencias do projeto:
 ```bash
